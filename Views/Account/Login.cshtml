@@ -1,0 +1,33 @@
+﻿@model EvSahipleri
+
+
+<form method="post">
+
+    <div class="form-outline mb-4">
+        <input type="email" id="form2Example1" class="form-control" asp-for="EPosta" />
+        <label class="form-label" asp-for="EPosta">Eposta</label>
+    </div>
+
+
+    <div class="form-outline mb-4">
+        <input type="password" id="form2Example2" asp-for="Sifre" class="form-control" />
+        <label class="form-label" asp-for="Sifre">Password</label>
+    </div>
+
+ 
+    <div class="row mb-4">
+        <div class="col d-flex justify-content-center">
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox" asp-for="RememberMe" id="form2Example31" checked />
+                <label class="form-check-label" asp-for="RememberMe"> Remember me </label>
+            </div>
+        </div>
+
+        <div class="col">
+            <a href="#!">Forgot password?</a>
+        </div>
+    </div>
+
+    <button type="submit" class="btn btn-primary btn-block mb-4">Sign in</button>
+
+</form>

@@ -1,0 +1,43 @@
+﻿@model WebApplication1.Models.DaireAidat
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h1>Details</h1>
+
+<div>
+    <h4>DaireAidat</h4>
+    <hr />
+    <dl class="row">
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Daire)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Daire.Id)
+        </dd>
+        
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.ÖdemeTarihi)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.ÖdemeTarihi)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.ÖdenenTutar)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.ÖdenenTutar)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.AidatId)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.AidatId)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model?.Id">Edit</a> |
+    <a asp-action="Index">Back to List</a>
+</div>
