@@ -43,6 +43,7 @@ namespace WebApplication1.Controllers
                 claims.Add(new Claim(ClaimTypes.NameIdentifier, _user.Id.ToString()));
                 claims.Add(new Claim(ClaimTypes.Email, _user.EPosta));
                 claims.Add(new Claim(ClaimTypes.Role, _user.Sorumlu));
+                claims.Add(new Claim(ClaimTypes.Sid, _user.DaireId.ToString()));
 
 
                 var claimIdentity = new ClaimsIdentity(claims, CookieAuthenticationDefaults.AuthenticationScheme);

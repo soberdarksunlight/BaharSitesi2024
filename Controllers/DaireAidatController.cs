@@ -4,6 +4,7 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.IdentityModel.Tokens;
+using System.Security.Claims;
 using WebApplication1.Models;
 
 namespace WebApplication1.Controllers
@@ -21,8 +22,9 @@ namespace WebApplication1.Controllers
         // GET: DaireAidatController
         public ActionResult Index()
         {
+            int daireId=Convert.ToInt32(User.FindFirst(ClaimTypes.Sid).Value);
 
-            var model = _context.DaireAidats.Include(i => i.Daire);
+            var model = _context.DaireAidats.Where(i=>i.DaireId==daireId).Include(i => i.Daire);
             return View(model);
         }
 

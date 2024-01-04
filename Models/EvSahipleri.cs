@@ -16,6 +16,8 @@ namespace WebApplication1.Models
         public Daire Daire { get; set; }
         public int DaireId {  get; set; }
 
+       
+
         public bool RememberMe {  get; set; }
     }
 }
